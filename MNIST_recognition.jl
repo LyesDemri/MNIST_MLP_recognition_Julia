@@ -59,8 +59,9 @@ end
 #I'm only using the train images and labels because the test-labels file
 #is in a format that I don't have documentation for
 #of course I still separate train and test images later
-pixels= read_MNIST_images("MNIST/train-images.idx3-ubyte");
-labels = read_MNIST_labels("MNIST/train-labels.idx1-ubyte");
+cd()
+pixels= read_MNIST_images(pwd() * "/train-images.idx3-ubyte");
+labels = read_MNIST_labels(pwd() * "/train-labels.idx1-ubyte");
 
 #present input images as vectors and normalize
 X = reshape(pixels,(784,60000));
